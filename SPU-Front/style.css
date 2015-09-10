@@ -4,13 +4,12 @@
     box-sizing: border-box;
     margin-left: 10px;
     margin-right: 10px;
-    
     background: #F8F5E1;
 }
 
 .logo {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin bottom 20px;
 }
 
 .clearfix:after {
@@ -67,19 +66,28 @@ p {
 .author-text{
     font-size: 22px;
     background: #F8F5E1;
+    margin-top: 20px;
+    margin-bottom: 20px:
 }
 
 .blogpost {
     background: white;
     width: 75%;
     float: left;
+    border-top: 1px solid #808080;
+    border-right: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-bottom: 1px solid #808080;
 }
 
 .other-posts {
     background: rgba(244, 235, 27, 0.57);
     width: 20%;
     float: right;
-
+    border-top: 1px solid #808080;
+    border-right: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-bottom: 1px solid #808080;
 }
 
 strong {
@@ -95,5 +103,11 @@ footer {
 }
 
 .author-box {
-    float:none
+    float:none;
+    bo
+}
+
+.container {
+    width: 1140px;
+    margin: 20px auto 0 auto ;
 }
