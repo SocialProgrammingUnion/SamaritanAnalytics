@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.SPU {
+    margin-left: 0px;
+}
+
+body {
+	font-family: Courier;
+	font-size: 18px;
+	background: #F8F5E1
+}
+
+h1 {
+	color: Red;
+	font-size: 40px;
+	font-family: Courier;
+    margin-bottom: 20px;
+}
+
+h2, h3, p {
+	color: Black;
+	font-family: Courier;
+}
+
+h2 {
+	font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+	font-size: 15px;
+}
+
+p {
+	font-size: 15px;
+	text-align: justify;
+    margin-bottom: 20px;
+}
+
+.main-text{
+    text-align: justify
+}
+
+.author-text{
+    font-size: 22px
+}
