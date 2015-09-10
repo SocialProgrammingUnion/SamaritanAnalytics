@@ -4,11 +4,12 @@
     box-sizing: border-box;
     margin-left: 20px;
     margin-right: 20px;
-    
+    background: #F8F5E1;
 }
 
 .logo {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .SPU {
@@ -18,7 +19,6 @@
 body {
 	font-family: Courier;
 	font-size: 18px;
-	background: #F8F5E1
 }
 
 h1 {
@@ -26,16 +26,21 @@ h1 {
 	font-size: 40px;
 	font-family: Courier;
     margin-bottom: 20px;
+    background: white;
 }
 
 h2, h3, p {
 	color: Black;
 	font-family: Courier;
+    background: white;
 }
 
-h2 {
+h4 {
+    color: Black;
+	font-family: Courier;
 	font-size: 20px;
     margin-bottom: 10px;
+    background: #F8F5E1
 }
 
 h3 {
@@ -53,5 +58,22 @@ p {
 }
 
 .author-text{
-    font-size: 22px
+    font-size: 22px;
+    background: #F8F5E1;
+}
+
+.blogpost {
+    background: white;
+}
+
+.other-posts {
+    background: rgba(244, 235, 27, 0.57);
+}
+
+strong{
+    background: white;
+}
+
+.strong-footer {
+    background:  #F8F5E1;   
 }
