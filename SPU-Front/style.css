@@ -2,14 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
     background: #F8F5E1;
 }
 
 .logo {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .SPU {
@@ -64,16 +71,29 @@ p {
 
 .blogpost {
     background: white;
+    width: 75%;
+    float: left;
 }
 
 .other-posts {
     background: rgba(244, 235, 27, 0.57);
+    width: 20%;
+    float: right;
+
 }
 
-strong{
+strong {
     background: white;
 }
 
 .strong-footer {
-    background:  #F8F5E1;   
+    background:  #F8F5E1;
+}
+
+footer {
+    float:left;
+}
+
+.author-box {
+    float:none
 }
