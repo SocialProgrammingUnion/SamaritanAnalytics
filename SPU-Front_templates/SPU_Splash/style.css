@@ -1,0 +1,93 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: azure;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.22),rgba(0, 0, 0, 0.56)), url("./Marilyn.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size:240;
+    font-weight:300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #ff0000;
+    border: 1px solid #ffffff;
+    color: rgb(255, 255, 255);
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #ff0000; 
+    color: #fff; 
+}
+
+.btn:hover,
+.btn:active {
+    background-color: rgba(255, 0, 0, 0.65);
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: rgba(255, 0, 0, 0.65);
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #e67e22; 
+    color: #fff;        
+}
+
+.main-title {
+    position: absolute;
+    top: 5%;
+    left: 88%;
+}
+
+.button-group {
+    position:absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.logo {
+    position: absolute;
+    top: 79%;
+    left: 88%;
+    bottom: 5%;
+}
