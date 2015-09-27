@@ -1,0 +1,9 @@
+SECRET_KEY = '3afdfb58bce94b2f17f9fb66ed1fadd90ed2a911dbc833dabb7d09ec50e3e4fe'
+DEBUG = True
+DB_USERNAME = 'root'
+DB_PASSWORD = 'test'
+BLOG_DATABASE_NAME = 'blog'
+SQLALCHEMY_DATABASE_URI = 'mysql://%s:%s@mysql:3306/%s' % (DB_USERNAME, DB_PASSWORD, BLOG_DATABASE_NAME)
+POSTS_PER_PAGE = 5
+UPLOADED_IMAGES_DEST = '/opt/flask_blog/static/images'
+UPLOADED_IMAGES_URL = '/static/images/'
