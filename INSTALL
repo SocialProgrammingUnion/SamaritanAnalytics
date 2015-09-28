@@ -5,7 +5,7 @@ The db will need mysql and utilities.
 
 I'll get to work on a build script.
 
-
+# Where you extreacted the SPU_BLOG directory
 from flask_blog directory:
 
 DIRECTORY_FOR_flask_blog = ''
