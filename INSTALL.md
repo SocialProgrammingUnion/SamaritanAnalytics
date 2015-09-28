@@ -42,7 +42,7 @@ pip install -r requirements.txt
 python dbinit.py
 python tests.py
 python dbinit.py
-'''  
+```  
 At this point you can import the SPU1 SQL dump  and then start the server with:  
 ```bash  
 python manage.py runserver
