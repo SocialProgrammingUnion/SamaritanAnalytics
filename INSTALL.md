@@ -6,7 +6,7 @@ The db will need mysql and utilities.
 
 I'll get to work on a build script.
 
-**Where you extracted the SPU_BLOG directory**
+**Where you extracted the SPU_BLOG directory**  
 from flask_blog directory:
 
 ```bash  
