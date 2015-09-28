@@ -25,6 +25,8 @@ python tests.py
 
 python manage.py runserver
 
+#If you are running in docker don't forget the docker IP is what serves the web, not localhost.
+
 ##Troubleshooting
 python manage.py shell
 
