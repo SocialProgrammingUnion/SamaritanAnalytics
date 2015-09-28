@@ -41,6 +41,10 @@ docker run --name mysql-client -it --link db:mysql --rm mariadb sh -c 'exec mysq
 pip install -r requirements.txt
 python dbinit.py
 python tests.py
+python dbinit.py
+'''  
+At this point you can import the SPU1 SQL dump  and then start the server with:  
+```bash  
 python manage.py runserver
 ```  
 **If you are running in docker don't forget the docker IP is what serves the web, not localhost.**  
