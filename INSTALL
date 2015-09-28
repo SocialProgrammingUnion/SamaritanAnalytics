@@ -31,3 +31,10 @@ python manage.py runserver
 python manage.py shell
 
 #That should work
+#server routes
+host:5000/login
+host:5000/setup
+host:5000/post
+host:5000/admin
+host:5000/index
+host:5000/
