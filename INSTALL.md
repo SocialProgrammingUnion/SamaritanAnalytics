@@ -7,7 +7,8 @@ The db will need mysql and utilities.
 I'll get to work on a build script.
 
 **Where you extracted the SPU_BLOG directory**  
-from flask_blog directory:
+  
+the location of the extracted SOU_BLOG on the lcoal drive
 
 ```bash  
 DIRECTORY_FOR_flask_blog = ''
