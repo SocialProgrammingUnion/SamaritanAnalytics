@@ -56,5 +56,5 @@ host:5000/setup
 host:5000/post  
 host:5000/admin  
 host:5000/index  
-host:5000/register
+host:5000/register  
 host:5000/  
