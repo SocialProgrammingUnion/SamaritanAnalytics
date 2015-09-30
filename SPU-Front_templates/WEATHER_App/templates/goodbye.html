@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Goodbye Weather World!{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+  <p class="important">
+    Goodbye from the Weather homepage.
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Check your Spelling{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<h2>Check your Spelling</h2>
+  <p class="important">
+    The City Name you entered was not found.
+    Try using the city followed by the country.
+    e.g.  Ottowa, Canada
+  </p>
+  <form>
+    View forecast for city: <input type="text" name="searchcity"> <input type="submit" value="Submit">
+  </form>
+  {{user_input}}
+  <br></br>
+{% endblock %}

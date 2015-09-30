@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Weather{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+  <p class="important">
+    <h2>Weather Results for {{ city['name'] }}<h4>
+    <h4>Lattitude: {{ city['coord']['lat'] }} - Longitude {{ city['coord']['lon'] }}<h4>
+    <h4>Country: {{ city['country'] }}</h4>
+    <h4>id: {{ city['id'] }}</h4>
+    <h4>Population Record: {{ city['population'] }}</h4>
+    {% if data %}
+      {% for day in data %}
+      <table style="width:33%; font-size: 75%; border: 1px solid black;">
+        <tr>
+          <td>clouds: {{ day['clouds'] }}</td>
+        </tr>
+        <tr>
+          <td>rain: {{ day['rain'] }}</td>
+        </tr>
+        <tr>
+          <td>humidity: {{ day['humidity'] }}</td>
+        </tr>
+        <tr>
+          <td>pressure: {{ day['pressure'] }}</td>
+        </tr>
+        <tr>
+          <td>date: {{ day['date'] }}</td>
+        </tr>
+        <tr>
+          <td>dt: {{ day['dt'] }}</td>
+        </tr>
+        <tr>
+          <td>speed: {{ day['speed'] }}</td>
+        </tr>
+        <tr>
+          <td>deg: {{ day['deg'] }}</td>
+        </tr>
+        <tr>
+          <td>weather: {{ day['weather'][0]['description'] }}</td>
+        </tr>
+        </table>
+      {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Hello Weather World!{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+  <p class="important">
+    <h1>Welcome to the Weather homepage.</h1>
+  </p>
+  <form>
+    View forecast for city: <input type="text" name="searchcity"> <input type="submit" value="Submit">
+  </form>
+  <h2>Weather Forecast for {{city}} - {{country}}</h2>
+  </br>
+  <table border="1" style="width:33.3%">
+      <tr>
+        <th>Date</th><th>Min</th><th>Max</th><th>Description</th><th>button</th>
+      </tr>
+    {% for day in forecast_list %}
+      {% if day[3] == 'light rain' %}
+      <tr>
+        <td><font color="blue">{{day[0]}}</font></td>
+        <td><font color="blue">{{day[1]}}</font></td>
+        <td><font color="blue">{{day[2]}}</font></td>
+        <td><font color="blue">{{day[3]}}</font></td>
+      </tr>
+      {% endif %}
+      {% if day[3] == 'sky is clear' %}
+      <tr>
+        <td><font color="orange">{{day[0]}}</font></td>
+        <td><font color="orange">{{day[1]}}</font></td>
+        <td><font color="orange">{{day[2]}}</font></td>
+        <td><font color="orange">{{day[3]}}</font></td>
+      </tr>
+      {% endif %}
+      {% if day[3] != 'sky is clear' and day[3] != 'light rain' %}
+      <tr>
+        <td><font color="purple">{{day[0]}}</font></td>
+        <td><font color="purple">{{day[1]}}</font></td>
+        <td><font color="purple">{{day[2]}}</font></td>
+        <td><font color="purple">{{day[3]}}</font></td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+    </table>
+{% endblock %}
