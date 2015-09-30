@@ -1,5 +1,5 @@
 ##A template for a weather applet.  
-The applciation is based on code that comes from a tutorial by Gareth Dwyer.   
+The application is based on code that comes from a tutorial by Gareth Dwyer.   
 
 ###Example searches
 Heaven  
