@@ -1,0 +1,51 @@
+body {
+  background: linear-gradient(to right, lightblue, azure, rgba(245, 239, 235, 0.4), rgba(247, 251, 241, 0.29), white, white ,white);
+  font: Courier;
+}
+
+a {
+  color: crimson;
+  text-decoration: none;
+  font-size: 150%;
+  font-weight:200;
+  text-shadow: 1px 1px darkblue;
+}
+
+a:hover,
+a:active {
+  color: darkblue;
+}
+h1 {
+    text-shadow: 1px 1px darkblue;
+}
+h4,
+h3 {
+    color: crimson;
+    text-shadow: 1px 1px darkblue;
+}
+
+.article-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%
+}
+.article-post h3,
+.article-post p {
+    text-align: center;
+}
+
+.article-post a {
+    text-align: center;
+    float: left;
+}
+
+article-text-muted {
+    text-align: center;
+}
+
+footer,
+footer a {
+    text-align: center;
+    padding-bottom: 6%;
+}
