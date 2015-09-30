@@ -3,8 +3,8 @@ import os, json, time, urllib2, urllib
 
 app = Flask(__name__)
 
-app.secret_key = 'dc367c6205529aa705c2afe6bd3222a3345a8243a50c291ee1635eaebccf353d'
-api_key = '322552f7dea4bdc8e6da0c58faadabbb'
+app.secret_key = ''
+api_key = ''
 
 def get_weather(api_key, city, mode, units):
     form ={'q': city, 'mode':mode, 'units':units, 'APPID': api_key }
