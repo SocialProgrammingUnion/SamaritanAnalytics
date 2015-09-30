@@ -1,5 +1,5 @@
 ##A template for a weather applet.  
-The applciation is based on code that comes from a tutorial by Gareth Dwyer.   
+The application is based on code that comes from a tutorial by Gareth Dwyer.   
 
 ###Example searches
 Heaven  
@@ -19,3 +19,8 @@ A full application can be coded rapidly if required.
 
 Currently looking at the werkzeug request object model.  
 Might need a replacement.  
+
+**You will need an api key and an app.secretkey in the index.py file**
+
+the secret key you can generate yourself  
+The API key obtain from http://openweathermap.org/  
