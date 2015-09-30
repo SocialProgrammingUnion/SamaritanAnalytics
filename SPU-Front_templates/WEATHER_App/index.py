@@ -1,10 +1,10 @@
-from flask import Flask, session, redirect, url_for, escape, request, flash, render_template, Markup
-import os, json, time, urllib2, urllib
+from flask import Flask, session, redirect, url_for, escape, request, flash, render_template, Markup, make_response
+import os, json, time, urllib2, urllib, datetime
 
 app = Flask(__name__)
 
-app.secret_key = ''
-api_key = ''
+app.secret_key = 'dc367c6205529aa705c2afe6bd3222a3345a8243a50c291ee1635eaebccf353d'
+api_key = '322552f7dea4bdc8e6da0c58faadabbb'
 
 def get_weather(api_key, city, mode, units):
     form ={'q': city, 'mode':mode, 'units':units, 'APPID': api_key }
@@ -37,6 +37,12 @@ def index():
 #@app.route("/<searchcity>")
 def default_route():
     searchcity = request.args.get("searchcity")
+    remember = request.args.get("remember")
+    if not searchcity:
+        try:
+            searchcity = request.cookies.get("last_city")
+        except:
+            pass
     if not searchcity:
         searchcity = 'London, UK'
     glob = get_weather2(api_key, searchcity, 'json', 'standard')
@@ -47,7 +53,12 @@ def default_route():
     except:
         return render_template('invalid_city.html', user_input=searchcity)
     country = data['city']['country']
-    return render_template('weather2.html', forecast_list=forecast_list, city=city, country=country)
+    if not remember:
+        response = make_response(render_template("weather2.html", forecast_list=forecast_list, city=city, country=country))
+        return response
+    response = make_response(render_template("weather2.html", forecast_list=forecast_list, city=city, country=country))
+    response.set_cookie("last_city", "{},{}".format(city, country), expires=datetime.datetime.today() + datetime.timedelta(days=365))
+    return response
 
 @app.route("/laWeather")
 def get_LA_weather():
@@ -56,10 +67,19 @@ def get_LA_weather():
     return render_template('city_weather.html', data=data, city=city )
 
 @app.route("/weather/<city>")
-def get_city_weather(city):
-    data = weatherWeek(city)[0]
-    city = weatherWeek(city)[1]
+@app.route("/weather/")
+def get_city_weather(city='London'):
+    if not request.args.get("searchcity"):
+        glob = weatherWeek(city)
+        data = glob[0]
+        city = glob[1]
+        return render_template('city_weather.html', data=data, city=city )
+    searchcity = request.args.get("searchcity")
+    glob = weatherWeek(searchcity)
+    data = glob[0]
+    city = glob[1]
     return render_template('city_weather.html', data=data, city=city )
+
 
 @app.route('/invalid')
 def invalid_entry():
